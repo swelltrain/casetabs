@@ -6,16 +6,16 @@ RSpec.describe Casetabs do
   end
 end
 
-RSpec.describe Casetabs, '.string_to_hash' do
+RSpec.describe Casetabs::StringToHash, '#call' do
   context 'when string is nil' do
     it 'returns an empty hash' do
-      expect(Casetabs.string_to_hash(nil)).to eq({})
+      expect(Casetabs::StringToHash.new(nil).call).to eq({})
     end
   end
 
   context 'when string is empty' do
     it 'returns an empty hash' do
-      expect(Casetabs.string_to_hash('')).to eq({})
+      expect(Casetabs::StringToHash.new('').call).to eq({})
     end
   end
 end
