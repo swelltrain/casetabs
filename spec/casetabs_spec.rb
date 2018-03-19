@@ -19,3 +19,9 @@ RSpec.describe Casetabs::StringToHash, '#call' do
     end
   end
 end
+
+RSpec.describe Casetabs::StringToHash, '#keys' do
+  it 'returns an array of keys' do
+    expect(Casetabs::StringToHash.new("{ key:[ [value_1, value_2],[value_3, value4] ], 5:10:00AM ] }").keys).to eq([" key:", " 5:"])
+  end
+end
