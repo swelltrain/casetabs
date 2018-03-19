@@ -10,6 +10,6 @@ module Casetabs
     end
 
     private
-    attr_accessor :string
+    attr_reader :string
   end
 end
