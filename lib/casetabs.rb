@@ -1,5 +1,8 @@
 require "casetabs/version"
 
 module Casetabs
-  # Your code goes here...
+  def self.string_to_hash(string)
+    h = {}
+    return h if string.nil?
+  end
 end
